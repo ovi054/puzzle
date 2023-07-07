@@ -1366,7 +1366,7 @@ body {
 .sliding-puzzle-figure {
   margin: auto;
   height: 450px;
-  width: 450vh;
+  width: 450px;
   max-height: 70vh;
   max-width: 70vh;
   padding-bottom: 50vh;
@@ -1382,8 +1382,8 @@ body {
       color: #3498DB; }
   .sliding-puzzle-figure .sliding-puzzle {
     list-style-type: none;
-    height:71vh;
-    width: 71vh;
+    height:350px;
+    width: 350px;
     position: relative;
     margin-left: auto;
     margin-right: auto;
@@ -1403,8 +1403,8 @@ body {
       border-radius: 10px;
       cursor: pointer;
       margin: 1px; 
-      width: 34%;
-      height: 34%;
+      width: 33%;
+      height: 33%;
       display: flex;
       justify-content: center;
       align-items: center;
