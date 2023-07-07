@@ -29,7 +29,6 @@ body {
     height: 100%;
     box-sizing: border-box;
     background-clip: border-box;
-    /* Firefox 4, Safari 5, Opera 10, IE 9 */
     border: 37px solid #2C3E50;
     border-radius: 10px;
     background-color: #2C3E50; }
@@ -71,4 +70,4 @@ body {
     .sliding-puzzle-figure .tile {
       font-size: 1em; } }
 
-/*# sourceMappingURL=style.css.map */
+
