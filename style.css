@@ -1402,7 +1402,7 @@ body {
       color: #1F1F1F;
       border-radius: 10px;
       cursor: pointer;
-      margin: 1px; 
+      /*margin: 1px; */
       width: 33%;
       height: 33%;
       display: flex;

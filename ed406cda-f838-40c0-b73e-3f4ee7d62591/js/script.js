@@ -248,12 +248,33 @@ function game() {
     }
   }
 
+function shuffleTiles() {
+  var emptyPosition = tileMap.empty.position;
+  var shuffleTiles = movementMap(emptyPosition);
+  var tilePosition = shuffleTiles[Math.floor(Math.random() * shuffleTiles.length)];
+  var locatedTile;
+  for (var i = 1; i <= 8; i++) {
+    if (tileMap[i].position == tilePosition) {
+      var locatedTileNumber = tileMap[i].tileNumber;
+      locatedTile = tiles[locatedTileNumber - 1];
+    }
+  }
+  if (lastShuffled != locatedTileNumber) {
+    moveTile(locatedTile);
+    lastShuffled = locatedTileNumber;
+  } else {
+    shuffleTiles();
+  }
+}
+
+
 function setup(tile) {
   // var tileId = tile.id;
    var tileId = tile.innerHTML;
   var backgroundUrl = getBackgroundUrl(tileId);
   tile.style.backgroundImage = "url('" + backgroundUrl + "')";
   tile.style.backgroundSize = "cover";
+  tile.style.backgroundRepeat = "no-repeat";
   tile.style.backgroundPosition = "center";
 
   var tileNumber = parseInt(tileId);
@@ -265,8 +286,20 @@ function setup(tile) {
   var yMovement = parentX * (top / 100);
   var translateString = "translateX(" + xMovement + "px) " + "translateY(" + yMovement + "px)";
   tile.style.webkitTransform = translateString;
-
   recolorTile(tile, tileNumber);
+  //setTimeout(() => {  console.log("World!"); }, 5000);
+  var shuffleDelay = 1200;
+    setTimeout(shuffleTiles, shuffleDelay)
+    setTimeout(shuffleTiles, 1900)
+    setTimeout(shuffleTiles, 2600)
+    // setTimeout(shuffleTiles, 3200)
+    // var shuffleCounter = 0;
+    // while (shuffleCounter < 20) {
+    //   shuffleDelay += 200;
+    //   shuffleTimeouts.push(setTimeout(shuffleLoop, shuffleDelay));
+    //   shuffleCounter++;
+    // }
+
 }
 
 function getBackgroundUrl(tileId) {
