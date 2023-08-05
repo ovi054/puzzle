@@ -1363,7 +1363,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   khtml-tap-highlight-color: transparent; }
 
-.sliding-puzzle-figure {
+.sliding-puzzle-figure-2 {
   margin: auto;
   height: 450px;
   width: 450px;
@@ -1373,14 +1373,14 @@ body {
   padding-top: 10vh; 
   align-items: center;
 }
-  .sliding-puzzle-figure a {
+  .sliding-puzzle-figure-2 a {
     text-decoration: none;
     cursor: pointer; }
-    .sliding-puzzle-figure a#shuffle {
+    .sliding-puzzle-figure-2 a#shuffle-2 {
       color: #E74C3C; }
-    .sliding-puzzle-figure a#solve {
+    .sliding-puzzle-figure-2 a#solve-2 {
       color: #3498DB; }
-  .sliding-puzzle-figure .sliding-puzzle {
+  .sliding-puzzle-figure-2 .sliding-puzzle-2 {
     list-style-type: none;
     height:350px;
     width: 350px;
@@ -1396,7 +1396,7 @@ body {
     background-color: #2C3E50; 
   }
 
-    .sliding-puzzle-figure .sliding-puzzle .tile {
+    .sliding-puzzle-figure-2 .sliding-puzzle-2 .tile-2 {
       position: absolute;
       background-color: #7BC8F3;
       color: #1F1F1F;
@@ -1417,20 +1417,20 @@ body {
       border: solid 2px; 
       border-color: #7BC8F3;
     }
-      .sliding-puzzle-figure .sliding-puzzle .tile.error {
+      .sliding-puzzle-figure-2 .sliding-puzzle-2 .tile-2.error {
         background-color: #F0867D 1px; 
         border-color: #F0867D;
       }
 
 @media only screen and (max-width: 650px) {
-  .sliding-puzzle-figure {
+  .sliding-puzzle-figure-2 {
     width: 90vw;
     height: 90vw;
     max-height: 100vh; }
-    .sliding-puzzle-figure .sliding-puzzle {
+    .sliding-puzzle-figure-2 .sliding-puzzle-2 {
       border-width: 10px;
       border-radius: 14px; }
-    .sliding-puzzle-figure .tile {
+    .sliding-puzzle-figure-2 .tile-2 {
       font-size: 1em; } }
 
 
