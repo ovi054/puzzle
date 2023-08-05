@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", game2);
 function game2() {
 
   // Data structure to hold positions of tiles
-  var parentX = document.querySelector(".sliding-puzzle-2").clientHeight;
+  var parentX = document.querySelector(".sliding-puzzlezzz").clientHeight;
   var baseDistance = 34.5;
   var tileMap = {
     1: {
@@ -161,9 +161,9 @@ function game2() {
   }
 
   // Board setup according to the tileMap
-  document.querySelector('#shuffle-2').addEventListener('click', shuffle , true);
-  document.querySelector('#solve-2').addEventListener('click', solve , true);
-  var tiles = document.querySelectorAll('.tile-2');
+  document.querySelector('#shufflezzz').addEventListener('click', shuffle , true);
+  document.querySelector('#solvezzz').addEventListener('click', solve , true);
+  var tiles = document.querySelectorAll('.tilezzz');
   var delay = -50;
   for(var i = 0; i < tiles.length; i++) {
     tiles[i].addEventListener('click', tileClicked ,true );
@@ -274,7 +274,7 @@ function game2() {
   shuffleTimeouts = [];
   function shuffle() {
     clearTimers(solveTimeouts);
-    var boardTiles = document.querySelectorAll('.tile-2');
+    var boardTiles = document.querySelectorAll('.tilezzz');
     var shuffleDelay = 200;
     shuffleLoop();
 

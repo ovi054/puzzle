@@ -1363,7 +1363,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   khtml-tap-highlight-color: transparent; }
 
-.sliding-puzzle-figure-2 {
+.sliding-puzzle-figurezzz {
   margin: auto;
   height: 450px;
   width: 450px;
@@ -1373,14 +1373,14 @@ body {
   padding-top: 10vh; 
   align-items: center;
 }
-  .sliding-puzzle-figure-2 a {
+  .sliding-puzzle-figurezzz a {
     text-decoration: none;
     cursor: pointer; }
-    .sliding-puzzle-figure-2 a#shuffle-2 {
+    .sliding-puzzle-figurezzz a#shufflezzz {
       color: #E74C3C; }
-    .sliding-puzzle-figure-2 a#solve-2 {
+    .sliding-puzzle-figurezzz a#solvezzz {
       color: #3498DB; }
-  .sliding-puzzle-figure-2 .sliding-puzzle-2 {
+  .sliding-puzzle-figurezzz .sliding-puzzlezzz {
     list-style-type: none;
     height:350px;
     width: 350px;
@@ -1396,7 +1396,7 @@ body {
     background-color: #2C3E50; 
   }
 
-    .sliding-puzzle-figure-2 .sliding-puzzle-2 .tile-2 {
+    .sliding-puzzle-figurezzz .sliding-puzzlezzz .tilezzz {
       position: absolute;
       background-color: #7BC8F3;
       color: #1F1F1F;
@@ -1417,20 +1417,20 @@ body {
       border: solid 2px; 
       border-color: #7BC8F3;
     }
-      .sliding-puzzle-figure-2 .sliding-puzzle-2 .tile-2.error {
+      .sliding-puzzle-figurezzz .sliding-puzzlezzz .tilezzz.error {
         background-color: #F0867D 1px; 
         border-color: #F0867D;
       }
 
 @media only screen and (max-width: 650px) {
-  .sliding-puzzle-figure-2 {
+  .sliding-puzzle-figurezzz {
     width: 90vw;
     height: 90vw;
     max-height: 100vh; }
-    .sliding-puzzle-figure-2 .sliding-puzzle-2 {
+    .sliding-puzzle-figurezzz .sliding-puzzlezzz {
       border-width: 10px;
       border-radius: 14px; }
-    .sliding-puzzle-figure-2 .tile-2 {
+    .sliding-puzzle-figurezzz .tilezzz {
       font-size: 1em; } }
 
 
