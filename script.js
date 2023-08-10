@@ -345,7 +345,7 @@ function game2() {
     moveTile(locatedTile);
     lastShuffled = locatedTileNumber;
   } else {
-    shuffleTiles();
+    // shuffleLoop();
   }
 }
 

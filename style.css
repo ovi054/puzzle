@@ -1429,7 +1429,8 @@ body {
     max-height: 100vh; }
     .sliding-puzzle-figurezzz .sliding-puzzlezzz {
       border-width: 10px;
-      border-radius: 14px; }
+      border-radius: 14px; 
+      border: 37px solid #2C3E50;}
     .sliding-puzzle-figurezzz .tilezzz {
       font-size: 1em; } }
 
