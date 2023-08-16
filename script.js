@@ -349,31 +349,46 @@ function game2() {
   }
 }
 
-function setup(tile) {
-  // var tileId = tile.id;
-   var tileId = tile.innerHTML;
-  var backgroundUrl = getBackgroundUrl(tileId);
-  tile.style.backgroundImage = "url('" + backgroundUrl + "')";
-  tile.style.backgroundSize = "cover";
-  tile.style.backgroundPosition = "center";
+// function setup(tile) {
+//   // var tileId = tile.id;
+//    var tileId = tile.innerHTML;
+//   var backgroundUrl = getBackgroundUrl(tileId);
+//   tile.style.backgroundImage = "url('" + backgroundUrl + "')";
+//   tile.style.backgroundSize = "cover";
+//   tile.style.backgroundPosition = "center";
 
-  var tileNumber = parseInt(tileId);
-  var position = tileMap[tileNumber].position;
-  var top = tileMap[tileNumber].top;
-  var left = tileMap[tileNumber].left;
+//   var tileNumber = parseInt(tileId);
+//   var position = tileMap[tileNumber].position;
+//   var top = tileMap[tileNumber].top;
+//   var left = tileMap[tileNumber].left;
 
-  var xMovement = parentX * (left / 100);
-  var yMovement = parentX * (top / 100);
-  var translateString = "translateX(" + xMovement + "px) " + "translateY(" + yMovement + "px)";
-  tile.style.webkitTransform = translateString;
+//   var xMovement = parentX * (left / 100);
+//   var yMovement = parentX * (top / 100);
+//   var translateString = "translateX(" + xMovement + "px) " + "translateY(" + yMovement + "px)";
+//   tile.style.webkitTransform = translateString;
 
-  recolorTile(tile, tileNumber);
+//   recolorTile(tile, tileNumber);
 
-  var shuffleDelay = 1200;
+//   var shuffleDelay = 1200;
+//     setTimeout(shuffleTiles, shuffleDelay)
+//     setTimeout(shuffleTiles, 1900)
+//     setTimeout(shuffleTiles, 2600)
+// }
+
+  function setup(tile) {
+    var tileId = tile.innerHTML;
+    // tile.style.left = tileMap[tileId].left + '%';
+    // tile.style.top = tileMap[tileId].top + '%';
+    var xMovement = parentX * (tileMap[tileId].left/100);
+    var yMovement = parentX * (tileMap[tileId].top/100);
+    var translateString = "translateX(" + xMovement + "px) " + "translateY(" + yMovement + "px)"
+    tile.style.webkitTransform = translateString;
+    recolorTile(tile, tileId);
+    var shuffleDelay = 1200;
     setTimeout(shuffleTiles, shuffleDelay)
     setTimeout(shuffleTiles, 1900)
     setTimeout(shuffleTiles, 2600)
-}
+  }
 
 function getBackgroundUrl(tileId) {
   return "css/" + tileId + ".png";
