@@ -4,6 +4,13 @@
 <head>
     <title>PicZify | Sliding Puzzle</title>
    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WQ9Z6JNV');</script>
+<!-- End Google Tag Manager -->
     <style>
     body {
   font-family: 'Roboto Condensed', sans-serif;
@@ -12,6 +19,23 @@
   background-color: #ECF0F1;
   -webkit-tap-highlight-color: transparent;
   khtml-tap-highlight-color: transparent;
+}
+
+.cta-button {
+    /*display: inline-block;*/
+    padding: 5px 20px;
+    font-size: 46px;
+    text-decoration: none;
+    /*color: #fff;*/
+    color: black;
+    /*color: #ECF0F1;*/
+    /*background-color: #007BFF;*/
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
 }
 
 .sliding-puzzle-figure {
@@ -26,6 +50,19 @@
 
 .sliding-puzzle-figure a {
   cursor: pointer;
+}
+
+.sliding-puzzle-figure a#new {
+  background-color:#3498db;
+  /*margin-left: 60px;*/
+  /*text-align: center;*/
+   /*#007BFF;*/
+  font-family: initial;
+  font-weight: initial;
+  font-size: initial;
+  /*background-color: initial;*/
+  /*-webkit-tap-highlight-color: initial;*/
+  /*khtml-tap-highlight-color: initial;*/
 }
 
 .sliding-puzzle-figure a#shuffle {
@@ -130,6 +167,10 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQ9Z6JNV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
     <figure class="sliding-puzzle-figure">
 
@@ -144,10 +185,14 @@
             <li class="tile" id="ans8">8</li>
         </ul>
 
-        <figcaption>
+        <figcaption style="text-align: center; margin: 0;">
        PicZify Puzzle | <a id="shuffle">Shuffle</a> | <a id="solve">Solve</a>
+       <br>
+       <p><p>
+       <a href=".." id="new" class="cta-button">Create custom Puzzle at PicZify</a>
         </figcaption>
     </figure>
+    <!-- <a href=".." id="new" class="cta-button"><br>Coninue at PicZify</a> -->
 <script type = "text/JavaScript">
 
 document.addEventListener("DOMContentLoaded", game);
