@@ -17,6 +17,9 @@
     <!-- FontAwesome JS-->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
 
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript" src="assets/js/emailSender.js"></script>
+
     <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -653,57 +656,65 @@
 	    </div><!--//container-->
     </section><!--//audience-section-->
 
-    <!-- <section id="who-section" class="who-section py-5">
-        <div class="container py-5">
-            <h2 class="section-heading text-center mb-3">Who This Bundle Is For</h2>
-            <div class="section-intro single-col-max mx-auto text-center mb-5">This bundle is perfect for anyone looking to expand their t-shirt design library.</div>
-            <div class="row text-center">
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="icon mb-3"><i class="fas fa-user"></i></div>
-                    <h5>T-Shirt Designers</h5>
-                    <p>Access a diverse range of designs to inspire your next project.</p>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="icon mb-3"><i class="fas fa-store"></i></div>
-                    <h5>Print-on-Demand Businesses</h5>
-                    <p>Boost your product offerings with new and unique t-shirt designs.</p>
-                </div>
-                <div class="col-12 col-md-4 mb-4">
-                    <div class="icon mb-3"><i class="fas fa-users"></i></div>
-                    <h5>Entrepreneurs</h5>
-                    <p>Stand out in the market with high-quality and customizable designs.</p>
+
+    <section id="form-section" class="form-section">
+	    <div class="container">
+        <div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5">
+            <h2 class="form-heading text-center">Get A Free Demo</h2>
+            <div class="form-intro text-center mb-3">Still not convinced? Request a free demo,<br> and we'll email it to you right away.</div>
+            <div class="form-wrapper mx-auto">                  
+                <form id="signup-form" class="signup-form row g-2 align-items-center">
+                    <div class="col-12 col-lg-9">
+                        <label class="sr-only" for="semail">Email</label>
+                        <input type="email" id="semail" name="semail" class="form-control me-md-1 semail" placeholder="Your email" required>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                        <button type="submit" class="btn btn-primary btn-submit w-100">Send</button>
+                    </div>
+	                </form><!--//signup-form-->
+			    </div><!--//form-wrapper-->
+			    <div id="message" style="color: red;text-align: center;"></div> <!-- Inline message will be displayed here -->
+			</div>
+
+			    <div class="row justify-content-center">
+        <div class=" col-auto mt-4">
+
+            <div class="btn-container">
+                <a class="btn btn-stripe" href="https://piczify.lemonsqueezy.com/buy/36daf065-30b2-4bae-922e-3a6b0b00ad68/" id="payButton">
+                    Buy this bundle for $29
+                </a>
+                <p class="payment-text text-center">Payments are secured via stripe</p>
+                <div class="payment-icons">
+                	<i class="fab fa-cc-amex payment-icon amex"></i>
+                    <i class="fab fa-cc-visa payment-icon visa"></i>
+                    <i class="fab fa-cc-mastercard payment-icon mastercard"></i>
+                    <i class="fab fa-paypal payment-icon paypal"></i>
+                    <!-- <i class="fab fa-stripe payment-icon"></i> -->
+                    <!-- Additional payment icons -->
+                    <i class="fab fa-cc-amazon-pay payment-icon amazon-pay"></i>
+                    <!-- <i class="fab fa-cc-discover payment-icon"></i> -->
+                    <!-- <i class="fab fa-cc-jcb payment-icon"></i> -->
+                    <!-- <i class="fab fa-cc-diners-club payment-icon"></i> -->
+                    <i class="fab fa-google-pay payment-icon google-pay"></i>
+                    <i class="fab fa-apple-pay payment-icon apple-pay"></i>
+
                 </div>
             </div>
         </div>
-    </section><!--//who-section--> 
-    
-    <!-- <section id="form-section" class="form-section">
-	    <div class="container">
-		    <div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5">
-			    <h2 class="form-heading text-center">Get A Free Preview</h2>
-			    <div class="form-intro text-center mb-3">Sign up to get a free preview of the book. <br>You can offer visitors free book previews to generate leads.</div>
-			    <div class="form-wrapper mx-auto">					
-					<form class="signup-form row g-2 align-items-center">
-	                    <div class="col-12 col-lg-9">
-	                        <label class="sr-only" for="semail">Email</label>
-	                        <input type="email" id="semail" name="semail1" class="form-control me-md-1 semail" placeholder="Your email">
-	                    </div>
-	                    <div class="col-12 col-lg-3">
-	                        <button type="submit" class="btn btn-primary btn-submit w-100">Send</button>
-	                    </div>
-	                </form>
-			    </div>
-		    </div>
-	    </div>
-    </section> -->
+		    </div><!--//lead-form-wrapper-->
+	    </div><!--//container-->
+
+    </section><!--//form-section-->
+
+   
 
 
 
     
     <section id="reviews-section" class="reviews-section py-5">
 	    <div class="container">
-		    <h2 class="section-heading text-center">What Our Customers Are Saying</h2>
-		    <div class="section-intro text-center single-col-max mx-auto mb-5">See what our customers are saying about the Ultimate T-Shirt Bundle.</div>
+		    <h2 class="section-heading text-center">Reviews</h2>
+		    <div class="section-intro text-center single-col-max mx-auto mb-5">What Our Customers Are Saying.</div>
 		    <div class="row justify-content-center">
 			    <div class="item col-12 col-lg-4 p-3 mb-4">
 				    <div class="item-inner theme-bg-light rounded p-4">
