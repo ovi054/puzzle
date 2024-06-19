@@ -31,7 +31,7 @@
                 emailjs.send('service_o8h8znr', 'template_1saddj9', {
                     to_email: email // Make sure this matches the placeholder in your EmailJS template
                 }).then((response) => {
-                    messageDiv.textContent = 'Demo T-Shirt bundle is sent! Please check your email.';
+                    messageDiv.textContent = 'Demo T-Shirt bundle is sent! Please check your email inbox/spam box.';
                 }, (error) => {
                     console.error('Failed to send email:', error);
                     messageDiv.textContent = 'Failed to send email.';
