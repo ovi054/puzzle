@@ -31,7 +31,13 @@
                 emailjs.send('service_o8h8znr', 'template_1saddj9', {
                     to_email: email // Make sure this matches the placeholder in your EmailJS template
                 }).then((response) => {
-                    messageDiv.textContent = 'Demo T-Shirt bundle is sent! Please check your email inbox/spam box.';
+                    messageDiv.innerHTML = `
+        <span style="color: black;">
+            Access the demo sample here:
+            <a href="https://drive.google.com/drive/folders/12AZYM8cbVSCCsQnzlB7uJ_ArmleffCbu?usp=drive_link" target="_blank" style="color: #1a73e8;">https://drive.google.com/drive/folders/12AZYM8cbVSCCsQnzlB7uJ_ArmleffCbu?usp=drive_link</a><br> 
+            We've also emailed the samples to you. Please check your inbox or spam folder.
+        </span>
+    `;
                 }, (error) => {
                     console.error('Failed to send email:', error);
                     messageDiv.textContent = 'Failed to send email.';
