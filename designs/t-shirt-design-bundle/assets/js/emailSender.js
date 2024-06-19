@@ -33,7 +33,7 @@
                 }).then((response) => {
                     messageDiv.innerHTML = `
         <span style="color: black;">
-            Access the demo sample here: <br>
+            Download the demo sample from Google Drive: <br>
             <a href="https://drive.google.com/drive/folders/12AZYM8cbVSCCsQnzlB7uJ_ArmleffCbu?usp=drive_link" target="_blank" style="text-decoration: none;">
                 <button style="background-color: #1a73e8; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">
                     Download Now
