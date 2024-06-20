@@ -1,5 +1,5 @@
 (function() {
-            emailjs.init('KCyjX0-GoRpgqDX7a'); // Replace with your actual user ID (public key) from EmailJS
+            emailjs.init('bzOORFu7gxC20oSb4'); // Replace with your actual user ID (public key) from EmailJS
         })();
 
         // Email validation function
@@ -28,7 +28,7 @@
                 messageDiv.textContent = 'Sending email...';
 
                 // Send the email via EmailJS
-                emailjs.send('service_o8h8znr', 'template_1saddj9', {
+                emailjs.send('service_lfsbubp','template_0llpyte', {
                     to_email: email // Make sure this matches the placeholder in your EmailJS template
                 }).then((response) => {
                     messageDiv.innerHTML = `
