@@ -10,6 +10,7 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             const emailInput = document.getElementById('semail');
+            const nameInput = document.getElementById('sname');
             const messageDiv = document.getElementById('message');
 
             document.getElementById('signup-form').addEventListener('submit', function(event) {
@@ -17,6 +18,7 @@
 
                 // Collect form data
                 const email = emailInput.value;
+                const name = nameInput.value;
 
                 // Validate email
                 if (!validateEmail(email)) {
@@ -29,7 +31,8 @@
 
                 // Send the email via EmailJS
                 emailjs.send('service_o8h8znr', 'template_1saddj9', {
-                    to_email: email // Make sure this matches the placeholder in your EmailJS template
+                    to_email: email, // Make sure this matches the placeholder in your EmailJS template
+                    to_name: name,
                 }).then((response) => {
                     messageDiv.innerHTML = `
         <span style="color: black;">
