@@ -249,24 +249,24 @@ function game2() {
     }
   }
 
-  function shuffleTiles() {
-  var emptyPosition = tileMap.empty.position;
-  var shuffleTiles = movementMap(emptyPosition);
-  var tilePosition = shuffleTiles[Math.floor(Math.random() * shuffleTiles.length)];
-  var locatedTile;
-  for (var i = 1; i <= 8; i++) {
-    if (tileMap[i].position == tilePosition) {
-      var locatedTileNumber = tileMap[i].tileNumber;
-      locatedTile = tiles[locatedTileNumber - 1];
-    }
-  }
-  if (lastShuffled != locatedTileNumber) {
-    moveTile(locatedTile);
-    lastShuffled = locatedTileNumber;
-  } else {
-    // shuffleLoop();
-  }
-}
+//   function shuffleTiles() {
+//   var emptyPosition = tileMap.empty.position;
+//   var shuffleTiles = movementMap(emptyPosition);
+//   var tilePosition = shuffleTiles[Math.floor(Math.random() * shuffleTiles.length)];
+//   var locatedTile;
+//   for (var i = 1; i <= 8; i++) {
+//     if (tileMap[i].position == tilePosition) {
+//       var locatedTileNumber = tileMap[i].tileNumber;
+//       locatedTile = tiles[locatedTileNumber - 1];
+//     }
+//   }
+//   if (lastShuffled != locatedTileNumber) {
+//     moveTile(locatedTile);
+//     lastShuffled = locatedTileNumber;
+//   } else {
+//     // shuffleLoop();
+//   }
+// }
 
 // function setup(tile) {
 //   // var tileId = tile.id;
