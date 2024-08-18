@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- DevCorner - Favicon -->
+  <link rel="shortcut icon" href="img/con.svg"/>
+  <link rel="icon" type="image/x-icon" href="img/icon.ico"/>
+  <meta property="og:image" content="img/image.png">
+
+  <!-- Custom Css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <title>Mountain Biker</title>
+</head>
+<body>
+
+
+  <!-- Splash Screen -->
+  <div id="splash-screen">
+    <img src="img/image.png" alt="Wallpaper" id="wallpaper">
+    <div id="final-score">
+      <p id="score">Your Score: 0</p>
+      <p id="highest-score">High Score: 0</p>
+      <button id="play-button">Play Now</button>
+    </div>
+  </div>
+
+
+  <header id="top-bar">
+    <h1>Mountain Biker</h1>
+  </header>
+
+  <canvas id="canvas" width="720" height="480"></canvas>
+
+  <section>
+    <div class="table">
+          <!-- Add Gear button -->
+      <button id="gearButton">
+        <i class="fas fa-play" style="font-size: 50px;"></i>
+      </button>
+      <!-- <h4>Use your arrow keys to navigate the motorcycle</h4>
+      <p id="first"><kbd>&uarr;</kbd></p>
+        <span>
+          <p><kbd>&larr;</kbd></p>
+          <p><kbd>&darr;</kbd></p>
+          <p><kbd>&rarr;</kbd></p>
+        </span> -->
+    </div>
+  </section>
+
+  <script src="js/main.js" charset="utf-8"></script>
+</body>
+</html>
