@@ -40,7 +40,7 @@ var noise = x=>{
 
 var Player = function(){
   this.x = c.width/2;
-  this.y = 0;
+  this.y = c.height-150;
   this.ySpeed = 0;
   this.rot = 0;
   this.rSpeed = 0;
