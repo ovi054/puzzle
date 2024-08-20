@@ -202,7 +202,7 @@ function drawScore() {
 }
 
 // Initialize Telegram SDK
-    TelegramGames.init();
+    // TelegramGames.init();
 
     // Function to post high score
     function postScore(score) {
