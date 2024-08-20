@@ -155,7 +155,6 @@ function loop(){
 
   // Hide the game screen
   canvas.style.display = 'none';
-  sendScore(score);
   // submitScore(score);
   restart();
 }
@@ -201,36 +200,7 @@ function drawScore() {
   ctx.restore();
 }
 
-// Function to send the score to Telegram
-function sendScore(score) {
-    // Ensure Telegram is initialized
-    if (typeof Telegram !== 'undefined' && Telegram.WebApp) {
-        const userId = Telegram.WebApp.initDataUnsafe.user.id;
-        const chatId = Telegram.WebApp.initDataUnsafe.chat.id;
-        const messageId = 'yourMessageId';  // Replace with your actual message ID
-        
-        fetch('https://mountain-biker-game.avi-pal357.workers.dev/', {  // Your worker URL
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                score: score,
-                user_id: userId,
-                chat_id: chatId,
-                message_id: messageId
-            })
-        }).then(response => {
-            if (response.ok) {
-                console.log('Score sent successfully');
-            } else {
-                console.error('Failed to send score');
-            }
-        }).catch(error => {
-            console.error('Error sending score:', error);
-        });
-    } else {
-        console.error('Telegram WebApp is not initialized');
-    }
-}
+
 
 // Function to submit the high score to Telegram
 // function submitScoreToTelegram(score) {
