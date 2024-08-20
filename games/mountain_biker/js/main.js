@@ -155,7 +155,7 @@ function loop(){
 
   // Hide the game screen
   canvas.style.display = 'none';
-  submitScoreToTelegram(score);
+  submitScore(score);
   restart();
 }
   requestAnimationFrame(loop);
@@ -202,14 +202,22 @@ function drawScore() {
 
 
 // Function to submit the high score to Telegram
-function submitScoreToTelegram(score) {
-  if (typeof TelegramGameProxy !== 'undefined') {
-    // Use the Telegram Game Proxy to submit the score
-    TelegramGameProxy.setScore(score);
-  } else {
-    console.error('TelegramGameProxy is not available');
+// function submitScoreToTelegram(score) {
+//   if (typeof TelegramGameProxy !== 'undefined') {
+//     // Use the Telegram Game Proxy to submit the score
+//     TelegramGameProxy.setScore(score);
+//   } else {
+//     console.error('TelegramGameProxy is not available');
+//   }
+// }
+
+function submitScore(score) {
+    if (window.TelegramGameProxy) {
+      TelegramGameProxy.submitScore(score);
+    } else {
+      console.error('TelegramGameProxy not available');
+    }
   }
-}
 
 
 // Add touch control after initializing the canvas
