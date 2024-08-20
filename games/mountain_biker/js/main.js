@@ -155,6 +155,7 @@ function loop(){
 
   // Hide the game screen
   canvas.style.display = 'none';
+  postScore(score);
   // submitScore(score);
   restart();
 }
@@ -199,6 +200,25 @@ function drawScore() {
 
   ctx.restore();
 }
+
+// Initialize Telegram SDK
+    TelegramGames.init();
+
+    // Function to post high score
+    function postScore(score) {
+      TelegramGames.setScore({
+        user_id: TelegramGames.initParams.user_id,
+        score: score,
+        chat_id: TelegramGames.initParams.chat_id,
+        message_id: TelegramGames.initParams.message_id,
+        inline_message_id: TelegramGames.initParams.inline_message_id,
+        disable_edit_message: false
+      }).then(response => {
+        console.log('Score posted successfully');
+      }).catch(error => {
+        console.error('Error posting score:', error);
+      });
+    }
 
 
 // Function to submit the high score to Telegram
