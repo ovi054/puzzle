@@ -155,6 +155,7 @@ function loop(){
 
   // Hide the game screen
   canvas.style.display = 'none';
+  submitScoreToTelegram(score);
   restart();
 }
   requestAnimationFrame(loop);
@@ -197,6 +198,17 @@ function drawScore() {
   ctx.fillText(highestScoreText, c.width - 10, 10); // 10px padding from the right edge
 
   ctx.restore();
+}
+
+
+// Function to submit the high score to Telegram
+function submitScoreToTelegram(score) {
+  if (typeof TelegramGameProxy !== 'undefined') {
+    // Use the Telegram Game Proxy to submit the score
+    TelegramGameProxy.setScore(score);
+  } else {
+    console.error('TelegramGameProxy is not available');
+  }
 }
 
 
