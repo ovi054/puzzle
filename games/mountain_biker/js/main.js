@@ -24,20 +24,16 @@ function getParamsFromUrl() {
   return {
     userId: urlParams.get('user_id'),
     score: urlParams.get('score'),
-    chatId: urlParams.get('chat_id'),
-    messageId: urlParams.get('message_id'),
     inlineMessageId: urlParams.get('inline_message_id')
   };
 }
 
 // Function to send game score update to Cloudflare Worker
-async function updateScore(userId, score, chatId, messageId, inlineMessageId) {
+async function updateScore(userId, score, inlineMessageId) {
   const apiUrl = `https://mountain-biker-game.avi-pal357.workers.dev/setscore`;
   const payload = {
     user_id: userId,
     score: score,
-    chat_id: chatId,
-    message_id: messageId,
     inline_message_id: inlineMessageId
   };
 
@@ -202,7 +198,7 @@ function loop(){
   // Hide the game screen
   canvas.style.display = 'none';
   // submitScore(score);
-  updateScore(params.userId, score, params.chatId, params.messageId, params.inlineMessageId);
+  updateScore(params.userId, score, params.inlineMessageId);
   restart();
 }
   requestAnimationFrame(loop);
