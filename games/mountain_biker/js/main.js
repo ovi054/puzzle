@@ -16,6 +16,52 @@ document.addEventListener('DOMContentLoaded', () => {
   initGame(); // Function to initialize game elements (if any)
 });
 
+// Function to extract parameters from URL
+function getParamsFromUrl() {
+  const queryString = window.location.search; // Get query string from URL
+  const urlParams = new URLSearchParams(queryString);
+
+  return {
+    userId: urlParams.get('user_id'),
+    score: urlParams.get('score'),
+    chatId: urlParams.get('chat_id'),
+    messageId: urlParams.get('message_id'),
+    inlineMessageId: urlParams.get('inline_message_id')
+  };
+}
+
+// Function to send game score update to Cloudflare Worker
+async function updateScore(userId, score, chatId, messageId, inlineMessageId) {
+  const apiUrl = `https://mountain-biker-game.avi-pal357.workers.dev/setscore`;
+  const payload = {
+    user_id: userId,
+    score: score,
+    chat_id: chatId,
+    message_id: messageId,
+    inline_message_id: inlineMessageId
+  };
+
+  try {
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      console.log('Score updated successfully:', data);
+    } else {
+      console.error('Error updating score:', data);
+    }
+  } catch (error) {
+    console.error('Fetch error:', error);
+  }
+}
+
+
+// Extract parameters from the URL
+const params = getParamsFromUrl();
 
 
 
@@ -156,6 +202,7 @@ function loop(){
   // Hide the game screen
   canvas.style.display = 'none';
   // submitScore(score);
+  updateScore(params.userId, score, params.chatId, params.messageId, params.inlineMessageId);
   restart();
 }
   requestAnimationFrame(loop);
