@@ -1,0 +1,187 @@
+#countdown-section {
+    background: #f8f9fa;
+    padding: 2rem 0;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    flex-wrap: nowrap;
+}
+
+.countdown-element {
+    text-align: center;
+    background: #fff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.countdown-element span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/*@media (max-width: 768px) {
+    .countdown {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .countdown-element {
+        font-size: 1rem;
+        padding: 0.25rem;
+    }
+
+    .countdown-element span {
+        font-size: 1.5rem;
+    }
+}*/
+
+@media (max-width: 768px) {
+    .countdown {
+        gap: 0.5rem;
+        font-size: 1rem; /* Reduced font size for mobile */
+    }
+
+    .countdown-element {
+        flex: 1;
+        min-width: 70px;
+        font-size: 1rem; /* Reduced font size for mobile */
+        padding: 0.5rem; /* Reduced padding for mobile */
+    }
+
+    .countdown-element span {
+        font-size: 2rem; /* Same font size for mobile */
+    }
+}
+
+
+
+
+.btn-stripe:hover {
+    background-color: #ED6524;
+    border-color: #ED6524;
+}
+
+/*.payment-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.payment-icon {
+    margin: 0 5px; 
+}
+*/
+
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow icons to wrap to the next line on small screens */
+}
+
+.payment-icon {
+    margin: 0 5px; /* Add space between icons */
+    font-size: 15px; 
+    /*color: #4285F4;*/
+    /*background: linear-gradient(to right, #4285F4, #34A853, #FBBC05, #EA4335);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+}
+
+
+.payment-icon.visa {
+    color: #1A1F71; /* Visa blue */
+}
+
+.payment-icon.mastercard {
+    background: linear-gradient(to right, #FF5F00, #EB001B); /* Mastercard gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.payment-icon.paypal {
+    color: #003087; /* PayPal blue */
+}
+
+.payment-icon.amazon-pay {
+    /*color: #FF9900; */
+}
+
+.payment-icon.google-pay {
+    color: #4285F4; /* Google blue */
+}
+
+.payment-icon.apple-pay {
+    color: #000000; /* Apple black */
+}
+
+
+.payment-icon.amex {
+    color: #0070C9; /* Amex blue */
+}
+
+.payment-icon.fa-cc-klarna {
+    color: #FFB3C7; /* Klarna pink */
+}
+
+/* Uncomment and add colors for other payment icons if needed */
+/*
+.payment-icon.fa-stripe {
+    color: #6772E5; 
+}
+
+.payment-icon.fa-cc-discover {
+    color: #FF6000;
+}
+
+.payment-icon.fa-cc-jcb {
+    color: #004B91;
+}
+
+.payment-icon.fa-cc-diners-club {
+    color: #0079BE;
+}
+*/
+.btn-container {
+    margin-top: 10px;
+}
+
+
+
+.btn-stripe {
+    background-color: #ED6524;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 17px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/*.btn-stripe:hover {
+    background-color: #333;
+}*/
+
+.payment-text {
+    margin: 2px 0 2px;
+    font-size: 10px;
+    color: #666;
+}
+
+/*.payment-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.payment-icon {
+    width: 35px;
+    height: auto;
+    margin: 0 5px;
+}*/
