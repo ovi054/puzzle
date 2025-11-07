@@ -1,0 +1,5 @@
+# Ignore all SVG and Font files everywhere in the project
+*.svg
+*.ttf
+*.woff
+*.woff2
