@@ -1,5 +1,21 @@
-# Ignore all SVG and Font files everywhere in the project
-*.svg
-*.ttf
-*.woff
-*.woff2
+# Ignore all SVG files found in any subfolder of 'designs'
+designs/**/*.svg
+
+# Ignore all SVG files found in any subfolder of 'ai-tools'
+ai-tools/**/*.svg
+
+# --- Add these lines if fonts are also a problem ---
+
+# Ignore all TTF fonts found in any subfolder of 'designs'
+designs/**/*.ttf
+
+# Ignore all WOFF fonts found in any subfolder of 'designs'
+designs/**/*.woff
+designs/**/*.woff2
+
+# Ignore all TTF fonts found in any subfolder of 'ai-tools'
+ai-tools/**/*.ttf
+
+# Ignore all WOFF fonts found in any subfolder of 'ai-tools'
+ai-tools/**/*.woff
+ai-tools/**/*.woff2
